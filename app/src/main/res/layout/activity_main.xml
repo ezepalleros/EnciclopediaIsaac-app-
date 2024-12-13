@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <!-- Botón personalizado para agregar DLC -->
+    <Button
+        android:id="@+id/addDLCButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Agregar DLC"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onAddDLCClick"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/backButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón personalizado para volver atrás -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Volver"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onBackButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

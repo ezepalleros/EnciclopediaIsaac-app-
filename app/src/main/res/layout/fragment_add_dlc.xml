@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo general -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nombre del DLC -->
+    <EditText
+        android:id="@+id/dlcNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:background="@drawable/paperboi"
+        android:hint="Nombre del DLC"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Año de lanzamiento del DLC -->
+    <EditText
+        android:id="@+id/dlcYearEditText"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:background="@drawable/paperboi"
+        android:hint="Año de lanzamiento"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlcNameEditText" />
+
+    <!-- Imagen del DLC -->
+    <ImageView
+        android:id="@+id/dlcImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/default_image"
+        app:layout_constraintTop_toBottomOf="@+id/dlcYearEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para seleccionar la imagen -->
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="267dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Seleccionar Imagen"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onSelectImageClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlcImageView" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="267dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Agregar DLC"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onAddDLCClick"
+        app:layout_constraintTop_toBottomOf="@+id/selectImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

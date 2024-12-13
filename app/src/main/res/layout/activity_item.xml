@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Imagen de fondo (wallpaper) -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper"/>
+
+    <!-- Título para ítems pasivos con fondo de paperboi -->
+    <TextView
+        android:id="@+id/passiveTitle"
+        android:layout_width="368dp"
+        android:layout_height="69dp"
+        android:text="Items Pasivos"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:background="@drawable/paperboi"
+        android:gravity="center"/>
+
+    <!-- GridView para los ítems pasivos -->
+    <GridView
+        android:id="@+id/passiveGridView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/passiveTitle"
+        android:columnWidth="120dp"
+        android:numColumns="auto_fit"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:itemBackground="@drawable/dlc_item_border"/>
+
+    <!-- Título para ítems activos con fondo de paperboi -->
+    <TextView
+        android:id="@+id/activeTitle"
+        android:layout_width="368dp"
+        android:layout_height="69dp"
+        android:text="Items Activos"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/passiveGridView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:background="@drawable/paperboi"
+        android:gravity="center"/>
+
+    <!-- GridView para los ítems activos -->
+    <GridView
+        android:id="@+id/activeGridView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/activeTitle"
+        android:columnWidth="120dp"
+        android:numColumns="auto_fit"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:itemBackground="@drawable/dlc_item_border"/>
+
+    <!-- Mensaje vacío -->
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay items relacionados con este DLC. ¡Agrega uno!"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:background="@drawable/paperboi" />
+
+    <!-- Botón personalizado para agregar un ítem -->
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Añadir"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onAddItemClick"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/backButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón personalizado para volver atrás (MainActivity) -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/buttonboi"
+        android:text="Volver"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:onClick="onBackButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- Contenedor para el fragmento -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

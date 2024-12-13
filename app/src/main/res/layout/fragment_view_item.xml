@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen de fondo centrada -->
+    <ImageView
+        android:id="@+id/paperboiImageView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/paperboi"
+        android:contentDescription="Fondo Paperboi"
+        android:layout_gravity="center"
+        android:scaleType="centerInside" />
+
+    <!-- Contenedor de la información del ítem -->
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <!-- Imagen del ítem -->
+        <ImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="83dp"
+            android:scaleType="centerInside" />
+
+        <!-- Nombre del ítem -->
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/itemImageView"
+            android:layout_alignTop="@id/itemImageView"
+            android:text="Nombre: "
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="16dp" />
+
+        <!-- Descripción del ítem -->
+        <TextView
+            android:id="@+id/itemDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/itemImageView"
+            android:layout_below="@id/itemNameTextView"
+            android:text="Descripción:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Calidad del ítem -->
+        <TextView
+            android:id="@+id/itemQualityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemImageView"
+            android:layout_alignStart="@id/itemImageView"
+            android:layout_marginTop="29dp"
+            android:text="Calidad: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- Cargas del ítem -->
+        <TextView
+            android:id="@+id/itemChargesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemQualityTextView"
+            android:layout_alignStart="@id/itemImageView"
+            android:layout_marginTop="18dp"
+            android:text="Cargas: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Ítem"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver Atrás"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="16dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+

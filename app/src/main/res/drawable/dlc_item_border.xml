@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#FFEB3B"/>
+            <corners android:radius="4dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/black" />
+            <size android:width="100dp" android:height="100dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:color="#FFB300" android:width="1dp"/>
+            <pathData
+                android:pathData="M0,0 L10,10 M-10,-10 L0,0 M10,-10 L20,0" />
+        </shape>
+    </item>
+</layer-list>

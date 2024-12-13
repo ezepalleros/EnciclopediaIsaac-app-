@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ACT4AP-Ezequiel_Palleros</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="dlc_image">Imagen del DLC</string>
+</resources>
